@@ -1,0 +1,13 @@
+#!/bin/sh
+
+## Remote
+function jpt(){
+    # Fires-up a Jupyter notebook by supplying a specific port
+    jupyter notebook --no-browser --port=9090
+}
+
+## Local
+function jptt(){
+    # Forwards port $1 into port $2 and listens to it
+    ssh -N -f -L localhost:9090:localhost:9090 saunders@blake2.cs.umass.edu
+}
