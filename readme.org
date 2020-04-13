@@ -1,1 +1,9 @@
-** Fast AI Coursework
+* Fast AI Coursework
+
+** Setup 
+   Get Jupyter notebook running locally
+   Get Blake2/slurm running w/local notebook
+   
+** Lessons
+    https://course.fast.ai/videos/?lesson=1
+   
