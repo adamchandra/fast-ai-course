@@ -25,5 +25,3 @@ else
     echo "unrecognized host $host"
 fi
 
-pyth=$(which python)
-echo "Using python $pyth"
