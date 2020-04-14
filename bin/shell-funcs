@@ -1,7 +1,6 @@
 #!/bin/sh
 
-## Remote
-function jpt(){
+function jnb(){
     # Fires-up a Jupyter notebook by supplying a specific port
     jupyter notebook --no-browser --port=9090
 }

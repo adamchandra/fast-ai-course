@@ -1,14 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
-function jpt(){
-    # Fires-up a Jupyter notebook by supplying a specific port
-    jupyter notebook --no-browser --port=9090
-}
+host=$(uname -n)
 
-## bash init for conda on remote machine (blake2)
-function conda-init(){
-    # >>> conda initialize >>>
-    # !! Contents within this block are managed by 'conda init' !!
+if [[ $host == nimoy* ]]; then
+    # Local machine will properly init conda envs
+    echo "host is $host (recognized)"
+
+elif [[ $host == blake* ]]; then
+    echo "host is $host (recognized)"
+
     __conda_setup="$('/iesl/canvas/saunders/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
     if [ $? -eq 0 ]; then
         eval "$__conda_setup"
@@ -20,5 +20,10 @@ function conda-init(){
         fi
     fi
     unset __conda_setup
-    # <<< conda initialize <<<
-}
+
+else
+    echo "unrecognized host $host"
+fi
+
+pyth=$(which python)
+echo "Using python $pyth"

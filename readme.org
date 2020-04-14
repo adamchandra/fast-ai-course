@@ -1,8 +1,19 @@
 * Fast AI Coursework
 
 ** Setup 
-   Get Jupyter notebook running locally
-   Get Blake2/slurm running w/local notebook
+   
+
+*** Localhost (laptop)
+   > cd local-env 
+   > . conda-init
+   
+   Software setup
+   > conda install -c pytorch -c fastai fastai
+   > conda install jupyter notebook 
+   > conda install -c conda-forge jupyter_contrib_nbextensions
+
+   
+*** On Remote (blake2)
    
 ** Lessons
     https://course.fast.ai/videos/?lesson=1
